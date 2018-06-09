@@ -1,0 +1,7 @@
+C:\Users\usuario\Documents\Visual Studio 2013\Projects\StudentsApp\StudentTest\bin\Debug\StudentTest.dll
+C:\Users\usuario\Documents\Visual Studio 2013\Projects\StudentsApp\StudentTest\bin\Debug\StudentTest.pdb
+C:\Users\usuario\Documents\Visual Studio 2013\Projects\StudentsApp\StudentTest\bin\Debug\StudentsApp.exe
+C:\Users\usuario\Documents\Visual Studio 2013\Projects\StudentsApp\StudentTest\bin\Debug\StudentsApp.pdb
+C:\Users\usuario\Documents\Visual Studio 2013\Projects\StudentsApp\StudentTest\obj\Debug\StudentTest.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Documents\Visual Studio 2013\Projects\StudentsApp\StudentTest\obj\Debug\StudentTest.dll
+C:\Users\usuario\Documents\Visual Studio 2013\Projects\StudentsApp\StudentTest\obj\Debug\StudentTest.pdb
