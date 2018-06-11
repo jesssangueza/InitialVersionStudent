@@ -43,6 +43,34 @@ namespace StudentsApp
         }
 
         /// <summary>
+        /// Method to update a student
+        /// </summary>
+        /// <param name="student">
+        /// Student object.
+        /// </param>
+        /// <returns>
+        /// True if updating was true.
+        /// </returns>
+        public bool Update(Student student)
+        {
+            return this.repository.Update(student);
+        }
+
+        /// <summary>
+        /// Method to update a student
+        /// </summary>
+        /// <param name="studentId">
+        /// Student ID.
+        /// </param>
+        /// <returns>
+        /// True if updating was true.
+        /// </returns>
+        public bool Delete(int studentId)
+        {
+            return this.repository.Delete(studentId);
+        }
+
+        /// <summary>
         /// Method tha list all students.
         /// </summary>
         /// <returns>
@@ -64,6 +92,17 @@ namespace StudentsApp
         public IEnumerable<Student> Search(char parameter, string value)
         {
             return this.repository.Search(parameter, value);
+        }
+
+        /// <summary>
+        /// Method that Reads all Students.
+        /// </summary>
+        /// <returns>
+        /// Count of Students.
+        /// </returns>
+        public async Task<int> ReadStudentsAsync()
+        {
+            return await this.repository.ReadStudentsAsync();
         }
     }
 }

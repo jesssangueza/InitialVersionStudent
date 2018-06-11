@@ -15,18 +15,18 @@ namespace StudentTest
         private StudentController studentController;
         
         [TestInitialize]
-        public void Init()
+        public async void Init()
         { 
-            this.repositorio = new StudentRepository();
-            this.studentController = new StudentController(this.repositorio);
+            this.repositorio = new StudentRepository(test:true);
+            this.studentController = new StudentController(this.repositorio);           
         }
 
         [TestMethod]        
         public void TestMethodList()
         {
-            int expected = 4;
+            int expected = 5;
             var lista = this.studentController.List().ToList();
-            Assert.AreEqual<int>(expected, lista.Count, "List Fail");
+            Assert.AreEqual(expected, lista.Count, "List Fail");
         }
 
         [TestMethod]
@@ -45,6 +45,21 @@ namespace StudentTest
             var student = new Student() { StudentType = TypeStudent.University, Name = "Jhon Rambo", Gender = 'M' };
             var result = this.studentController.Create(student);
             Assert.IsTrue(result, "Create Fail");
+        }
+
+        [TestMethod]
+        public void TestMethodUpdate()
+        {
+            var student = new Student() { StudentType = TypeStudent.University, Name = "Leia", Gender = 'F' };
+            var result = this.studentController.Update(student);
+            Assert.IsTrue(result, "Update Fail");
+        }
+
+        [TestMethod]
+        public void TestMethodDelete()
+        {            
+            var result = this.studentController.Delete(2);
+            Assert.IsTrue(result, "Delete Fail");
         }
 
         [TestCleanup]

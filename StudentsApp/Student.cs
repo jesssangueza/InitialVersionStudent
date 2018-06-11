@@ -13,6 +13,11 @@ namespace StudentsApp
     public class Student
     {
         /// <summary>
+        /// Student ID 
+        /// </summary>
+        public int StudentId { get; set; }
+
+        /// <summary>
         /// Student Type [Kinde|Elementary|High|University]
         /// </summary>
         public TypeStudent StudentType { get; set; }

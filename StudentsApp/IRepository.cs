@@ -14,8 +14,14 @@ namespace StudentsApp
     {
         bool Create(Student student);
 
+        bool Delete(int studentId);
+
+        bool Update(Student student);
+
         IEnumerable<Student> List();
 
         IEnumerable<Student> Search(char parameter, string value);
+
+        Task<int> ReadStudentsAsync();
     }
 }
